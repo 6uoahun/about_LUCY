@@ -1,0 +1,321 @@
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    width: 1200px;
+    background-color: rgb(255, 255, 255);
+    font-family: ChosunGu;
+    position: relative;
+}
+
+/* ---------- header ------------ */
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #3464b6;
+    margin: 0 auto;
+    z-index: 1000;
+    position: sticky;
+}
+
+
+.logo>img {
+    width: 250px;
+    height: 100%;
+}
+
+.mainmenu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainmenu>li {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 35px;
+    padding: 0 40px;
+    font-family: 'KIMM_Bold';
+}
+
+.mainmenu>li:hover {
+    color: #244783;
+}
+
+.submenu {
+    height: 400px;
+    display: none;
+}
+
+.submenu>li {
+    line-height: 2em;
+    font-weight: lighter;
+    color: #838FBB;
+    background-color: #F5F9FF;
+    padding: 10px 30px;
+    transform: translateY(30px);
+}
+
+.submenu>li:hover {
+    color: #3C4856;
+}
+
+/* ---------- main -------------*/
+main {
+    width: 1200px;
+    margin: 30px auto 0;
+    text-align: center;
+
+    /* background-color: #F3FAFF; */
+}
+
+h2 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-family: 'KIMM_Bold';
+
+}
+
+p {
+    margin-top: 1em;
+}
+
+.frame {
+    width: 1000px;
+    overflow: hidden;
+
+}
+
+.film {
+    display: flex;
+    transition-duration: 3s;
+    transition-property: initial;
+}
+
+.picture>img {
+    width: 1000px;
+    height: 666px;
+    display: flex;
+    background-color: #ffffff;
+
+}
+
+.profile>li {
+    margin: 0 20px;
+    text-align: left;
+    letter-spacing: 0;
+    line-height: 2em;
+}
+
+.history>ul>.year {
+    font-weight: 600;
+}
+
+.history>ul>li {
+    letter-spacing: 0;
+    line-height: 2em;
+
+}
+
+
+/* 앨범 */
+.album-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.album-list li {
+    width: 240px;
+    height: 240px;
+    padding: 0px;
+    margin: 10px 15px 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.album-list img {
+    width: 240px;
+    height: 240px;
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+}
+
+.album-list .caption {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background-color: #000;
+    color: #ffffff;
+    transition-property: all;
+    opacity: 0;
+    padding: 20px;
+    padding-top: 70px;
+}
+
+.album-list li:hover .caption {
+    /* li 태그에 마우스 올렸을 때 caption에다가 */
+    transform: translateY(-242px);
+    opacity: 1;
+    background-color: #000000aa;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+#full-list { 
+    display: flex;
+    justify-content: center;
+}
+/* 콘서트 */
+.con-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.con-list li {
+    width: 240px;
+    height: 360px;
+    padding: 0px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.con-list img {
+    width: 240px;
+    height: 336px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.con-list .caption {
+    position: absolute;
+    width: 240px;
+    height: 200px;
+    background-color: #000;
+    color: #ffffff;
+    transition-property: all;
+    opacity: 0;
+    padding: 20px;
+    line-height: 1.5em;
+
+}
+
+.con-list li:hover .caption {
+    transform: translateY(-200px);
+    opacity: 1;
+    background-color: #000000aa;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+
+
+/* video */
+.video .mv {
+    position: relative;
+}
+
+.video>videos>.mv>a {
+
+    margin: 20px auto;
+
+}
+
+
+.video .mv>img {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    font-family: 'ChosunGu';
+    opacity: 0.7;
+    position: absolute;
+    top: 40%;
+    left: 550px;
+    background-color: transparent;
+    border: none;
+}
+
+
+button:hover {
+    opacity: 1;
+    transform: scale(1.5);
+    transition-duration: 1s;
+
+}
+
+/* --------- footer ------------ */
+footer {
+    width: 1200px;
+    height: 90px;
+    background-color: #3464b6;
+}
+
+.footerwrap {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 0 0;
+}
+
+.footerwrap>div {
+    margin: 0%;
+}
+
+.footerLogo img {
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.icon {
+    display: flex;
+    margin: 0 10px;
+}
+
+.icon>div {
+    margin: 10px;
+}
+
+.icon>div>a>img {
+    width: 40px;
+    margin-top: 18px;
+}
+
+.icon>div>a>img:hover {
+    transform: scale(1.1);
+}
